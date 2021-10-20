@@ -4,6 +4,7 @@
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
 	export const hydrate = true;
+
 	// ...but if the client-side router is already loaded
 	// (i.e. we came here from elsewhere in the app), use it
 	export const router = true;
@@ -12,18 +13,18 @@
 	// it so that it gets served as a static asset in prod
 	//export const prerender = true;
 
-	//export const ssr = false;
+	//export const prerender = false;
 </script>
 
 <svelte:head>
-	<title>about</title>
+	<title>contact</title>
 </svelte:head>
 
 <div class="content">
-	<h1>About this app</h1>
+	<h1>contact this app</h1>
 
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the following into your command line and following the prompts: :
+		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the following into your command line and following the prompts:
 	</p>
 
 	<!-- TODO lose the @next! -->

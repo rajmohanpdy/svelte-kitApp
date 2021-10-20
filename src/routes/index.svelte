@@ -1,6 +1,9 @@
 <script context="module">
-	export const prerender = true;
+	//export const ssr = true; // ssr is default behavior of svelteKit
 	import Counter from '$lib/Counter.svelte';
+	// export const hydrate = true;
+	// export const prerender = false;
+	// export const router = true;
 
 </script>
 
