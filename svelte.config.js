@@ -2,6 +2,9 @@
 //import adapter from '@sveltejs/adapter-vercel';
 //import adapter from '@sveltejs/adapter-static';
 import adapter from '@sveltejs/adapter-netlify'
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
+const pkg = require('./package.json')
 // import { createRequire } from 'module'
 // const require = createRequire(import.meta.url)
 // const pkg = require('./package.json');
@@ -27,8 +30,13 @@ const config = {
 		// 		port: 'PORT'
 		// 	}
 		// }),
-		target: '#svelte'
-	}
+		target: '#svelte',
+		vite: {
+			ssr: {
+			  noExternal: Object.keys(pkg.dependencies || {}),
+			},
+		  },
+	},
 };
 
 export default config;
